@@ -11,7 +11,7 @@
         (= 3 number)   "III"
         (= 4 number)   "IV"
         (= 5 number)   "V"
-        (> number 5)   (str (arabic->roman 5)
+        (and (< number 9)   (> number 5))   (str (arabic->roman 5)
                             (arabic->roman (- number 5)))))
 
 (deftest test-1-becomes-I
