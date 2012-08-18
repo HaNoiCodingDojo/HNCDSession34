@@ -13,12 +13,11 @@
          [9 "IX"]
          [10 "X"]
          ]]
-    (take 1
-          (for [[arabic roman] (reverse arabic->roman-pairs)]
-            (if (= number arabic)
-              roman
-              (if (> number arabic )
-                (str roman (arabic->roman (- number arabic)))))))    
+    (first (for [[arabic roman] (reverse arabic->roman-pairs)]
+             (if (= number arabic)
+               roman
+               (if (> number arabic )
+                 (str roman (arabic->roman (- number arabic)))))))    
     ))
 
 (deftest test-13-becomes-XIII
