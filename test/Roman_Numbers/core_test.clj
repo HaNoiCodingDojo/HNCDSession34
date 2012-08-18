@@ -8,6 +8,5 @@
   (if (= 1 number)
     "I"))
 
-(deftest a-test
-  (testing "1 becomes I"
-    (is (= "I" (arabic->roman 1)))))
+(deftest test-1-becomes-I
+  (is (= "I" (arabic->roman 1))))
