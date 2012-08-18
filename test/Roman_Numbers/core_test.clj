@@ -5,26 +5,34 @@
 (defn arabic->roman
   "Convert arabic numbers to roman ones"
   [number]
-  (cond (= 0 number)   ""
-        (= 1 number)   "I"
+  (let [arabic->roman-pairs
+        [[0 ""]
+         [1 "I"]
+         [4 "IV"]
+         [5 "V"]
+         [9 "IX"]
+         [10 "X"]
+         ]]
+   (cond (= 0 number)   ""
+         (= 1 number)   "I"
 
-        (< number 4)
-        (str (arabic->roman 1)
-             (arabic->roman (dec number)))
+         (< number 4)
+         (str (arabic->roman 1)
+              (arabic->roman (dec number)))
 
-        (= 4 number)   "IV"
-        (= 5 number)   "V"
+         (= 4 number)   "IV"
+         (= 5 number)   "V"
 
-        (< number 9)
-        (str (arabic->roman 5)
-             (arabic->roman (- number 5)))
+         (< number 9)
+         (str (arabic->roman 5)
+              (arabic->roman (- number 5)))
 
-        (= 9 number)   "IX"
-        (= 10 number)  "X"
+         (= 9 number)   "IX"
+         (= 10 number)  "X"
 
-        :else
-        (str (arabic->roman 10)
-             (arabic->roman (- number 10)))))
+         :else
+         (str (arabic->roman 10)
+              (arabic->roman (- number 10))))))
 
 (deftest test-13-becomes-XIII
   (is (= "XIII" (arabic->roman 13))))
