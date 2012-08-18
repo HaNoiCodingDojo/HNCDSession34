@@ -7,8 +7,11 @@
   [number]
   (cond (= 0 number)   ""
         (= 1 number)   "I"
-        (= 2 number)   "II"
-        (= 3 number)   "III"
+
+        (< number 4)
+        (str (arabic->roman 1)
+             (arabic->roman (dec number)))
+
         (= 4 number)   "IV"
         (= 5 number)   "V"
         (and (< number 9)   (> number 5))
