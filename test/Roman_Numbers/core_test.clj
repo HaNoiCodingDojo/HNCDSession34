@@ -38,3 +38,5 @@
 (deftest test-8-becomes-VIII
   (is (= "VIII" (arabic->roman 8))))
 
+(deftest test-9-becomes-IX
+  (is (= "IX" (arabic->roman 9))))
