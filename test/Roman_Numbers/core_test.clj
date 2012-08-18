@@ -12,12 +12,15 @@
          [5 "V"]
          [9 "IX"]
          [10 "X"]
-         ]]
-    (first (for [[arabic roman] (reverse arabic->roman-pairs)]
-             (if (= number arabic)
-               roman
-               (if (> number arabic )
-                 (str roman (arabic->roman (- number arabic)))))))    
+         ]
+        temp (filter (fn [pair]
+                       (<= (first pair) number))
+                     arabic->roman-pairs)
+        first-element (first temp)]
+    (if (= number (first first-element))
+      (last first-element)
+      (str (last first-element) (arabic->roman (- number (first first-element)))))
+        
     ))
 
 (deftest test-13-becomes-XIII
