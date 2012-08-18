@@ -21,9 +21,10 @@
 
         (= 9 number)   "IX"
         (= 10 number)  "X"
-        (= 11 number)  "XI"
-        (= 12 number)  "XII"
-        (= 13 number)  "XIII"))
+
+        :else
+        (str (arabic->roman 10)
+             (arabic->roman (- number 10)))))
 
 (deftest test-13-becomes-XIII
   (is (= "XIII" (arabic->roman 13))))
