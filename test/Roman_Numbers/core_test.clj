@@ -29,3 +29,6 @@
 
 (deftest test-6-becomes-VI
   (is (= "VI" (arabic->roman 6))))
+
+(deftest test-7-becomes-VII
+  (is (= "VII" (arabic->roman 7))))
