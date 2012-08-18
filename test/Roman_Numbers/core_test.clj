@@ -17,3 +17,6 @@
 
 (deftest test-3-becomes-III
   (is (= "III" (arabic->roman 3))))
+
+(deftest test-4-becomes-IV
+  (is (= "IV" (arabic->roman 4))))
