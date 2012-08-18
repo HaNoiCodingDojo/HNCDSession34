@@ -7,7 +7,8 @@
   [number]
   (cond (= 1 number)   "I"
         (= 2 number)   "II"
-        (= 3 number)   "III"))
+        (= 3 number)   "III"
+        (= 4 number)   "IV"))
 
 (deftest test-1-becomes-I
   (is (= "I" (arabic->roman 1))))
