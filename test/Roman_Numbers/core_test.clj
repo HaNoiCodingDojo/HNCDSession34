@@ -33,3 +33,7 @@
 
 (deftest test-7-becomes-VII
   (is (= "VII" (arabic->roman 7))))
+
+(deftest test-8-becomes-VIII
+  (is (= "VIII" (arabic->roman 8))))
+
