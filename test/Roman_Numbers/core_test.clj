@@ -1,7 +1,7 @@
-(ns Roman-Numbers.core-test
+ (ns Roman-Numbers.core-test
   (:use clojure.test
         Roman-Numbers.core))
 
 (deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+  (testing "1 becomes I"
+    (is (= "I" (arabic->roman 1)))))
