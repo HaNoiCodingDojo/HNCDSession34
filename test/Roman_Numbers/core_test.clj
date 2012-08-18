@@ -17,14 +17,13 @@
                        (<= (first pair) number))
                      (reverse arabic->roman-pairs))
         first-element (first temp)
-        arabic (first first-element)
-        roman (last first-element)]
+        [arabic roman] first-element
+]
     (if (= number arabic)
       roman
       (str roman
            (arabic->roman (- number arabic))))
-        
-    ))
+        ))
 
 (deftest test-13-becomes-XIII
   (is (= "XIII" (arabic->roman 13))))
