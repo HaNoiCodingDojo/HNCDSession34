@@ -6,7 +6,8 @@
   "Convert arabic numbers to roman ones"
   [number]
   (cond (= 1 number)   "I"
-        (= 2 number)   "II"))
+        (= 2 number)   "II"
+        (= 3 number)   "III"))
 
 (deftest test-1-becomes-I
   (is (= "I" (arabic->roman 1))))
