@@ -6,9 +6,8 @@
   "Convert arabic numbers to roman ones"
   [number]
   (cond (= 0 number)   ""
-        (= 1 number)   "I"
-        (= 2 number)   "II"
-        (= 3 number)   "III"
+        (and (< 4 number))
+        (str (arabic->roman (dec number)) "I")
         (= 4 number)   "IV"
         (= 5 number)   "V"
         (and (< number 9)   (> number 5))
