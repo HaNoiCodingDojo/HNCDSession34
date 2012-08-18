@@ -14,9 +14,11 @@
 
         (= 4 number)   "IV"
         (= 5 number)   "V"
-        (and (< number 9)   (> number 5))
+
+        (< number 9)
         (str (arabic->roman 5)
              (arabic->roman (- number 5)))
+
         (= 9 number)   "IX"))
 
 (deftest test-1-becomes-I
