@@ -20,7 +20,8 @@
              (arabic->roman (- number 5)))
 
         (= 9 number)   "IX"
-        (= 10 number)  "X"))
+        (= 10 number)  "X"
+        (= 11 number)  "XI"))
 
 (deftest test-11-becomes-XI
   (is (= "XI" (arabic->roman 11))))
