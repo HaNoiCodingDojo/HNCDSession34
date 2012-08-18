@@ -19,7 +19,8 @@
         (str (arabic->roman 5)
              (arabic->roman (- number 5)))
 
-        (= 9 number)   "IX"))
+        (= 9 number)   "IX"
+        (= 10 number)  "X"))
 
 (deftest test-10-becomes-X
   (is (= "X" (arabic->roman 10))))
