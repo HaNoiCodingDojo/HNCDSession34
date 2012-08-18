@@ -5,8 +5,8 @@
 (defn arabic->roman
   "Convert arabic numbers to roman ones"
   [number]
-  (if (= 1 number)
-    "I"))
+  (cond (= 1 number)   "I"
+        (= 2 number)   "II"))
 
 (deftest test-1-becomes-I
   (is (= "I" (arabic->roman 1))))
