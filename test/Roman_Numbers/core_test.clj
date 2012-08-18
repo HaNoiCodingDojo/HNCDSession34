@@ -5,7 +5,8 @@
 (defn arabic->roman
   "Convert arabic numbers to roman ones"
   [number]
-  (cond (= 1 number)   "I"
+  (cond (= 0 number)   ""
+        (= 1 number)   "I"
         (= 2 number)   "II"
         (= 3 number)   "III"
         (= 4 number)   "IV"
