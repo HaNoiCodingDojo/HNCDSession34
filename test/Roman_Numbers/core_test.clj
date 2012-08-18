@@ -23,6 +23,9 @@
         (= 10 number)  "X"
         (= 11 number)  "XI"))
 
+(deftest test-12-becomes-XII
+  (is (= "XII" (arabic->roman 12))))
+
 (deftest test-11-becomes-XI
   (is (= "XI" (arabic->roman 11))))
 
