@@ -9,7 +9,8 @@
         (= 2 number)   "II"
         (= 3 number)   "III"
         (= 4 number)   "IV"
-        (= 5 number)   "V"))
+        (= 5 number)   "V"
+        (= 6 number)   "VI"))
 
 (deftest test-1-becomes-I
   (is (= "I" (arabic->roman 1))))
