@@ -17,10 +17,12 @@
                        (<= (first pair) number))
                      (reverse arabic->roman-pairs))
         first-element (first temp)
-        arabic (first first-element)]
+        arabic (first first-element)
+        roman (last first-element)]
     (if (= number arabic)
-      (last first-element)
-      (str (last first-element) (arabic->roman (- number (first first-element)))))
+      roman
+      (str roman
+           (arabic->roman (- number arabic))))
         
     ))
 
