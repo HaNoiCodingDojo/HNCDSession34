@@ -15,7 +15,7 @@
          ]
         temp (filter (fn [pair]
                        (<= (first pair) number))
-                     arabic->roman-pairs)
+                     (reverse arabic->roman-pairs))
         first-element (first temp)]
     (if (= number (first first-element))
       (last first-element)
