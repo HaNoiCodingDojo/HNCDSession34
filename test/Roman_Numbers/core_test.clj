@@ -10,3 +10,6 @@
 
 (deftest test-1-becomes-I
   (is (= "I" (arabic->roman 1))))
+
+(deftest test-2-becomes-II
+  (is (= "II" (arabic->roman 2))))
