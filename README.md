@@ -1,15 +1,11 @@
 # Roman-Numbers
 
-I'm an app. Or maybe I'm a library? I haven't decided yet. 
+## 2012/08/18
 
-The choice is up to you!
-
-## Usage
-
-FIXME
+Randori Kata / Clojure (Clojure) / Roman Numbers / EPL
 
 ## License
 
-Copyright © 2012 FIXME
+Copyright © 2012 HanoiCodingDojo
 
 Distributed under the Eclipse Public License, the same as Clojure.
